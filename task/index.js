@@ -16,14 +16,14 @@ app.get('/', (req, res) => {
 })
 //read file
 app.get('/files/:name', (req, res) => {
-    fs.readFile(`./files/${req.params.name}`, "utf-8",(err, data) => {
-        res.render('show',{data:data, name:req.params.name.split(".")[0]})
+    fs.readFile(`./files/${req.params.name}`, "utf-8", (err, data) => {
+        res.render('show', { data: data, name: req.params.name.split(".")[0] })
     })
 })
 //delete file
 app.get('/delete/:file', (req, res) => {
-    fs.unlink(`./files/${req.params.file}`,(error)=>{
-        res.redirect('/') 
+    fs.unlink(`./files/${req.params.file}`, (error) => {
+        res.redirect('/')
     })
 })
 //submit the task
@@ -33,12 +33,13 @@ app.post('/submit-task', (req, res) => {
     })
 })
 //edit file name
-app.get("/edit/:name",(req,res)=>{
-    res.render('edit',{name:req.params.name})
+app.get("/edit/:name", (req, res) => {
+    res.render('edit', { name: req.params.name })
 })
-app.post("/edit",(req,res)=>{
+//edit the file
+app.post("/edit", (req, res) => {
     // console.log(req.body.previous)
-    fs.rename(`./files/${req.body.previous}`,`./files/${req.body.new}.txt`,function(err){
+    fs.rename(`./files/${req.body.previous}`, `./files/${req.body.new}.txt`, function (err) {
         res.redirect('/')
     })
 })
