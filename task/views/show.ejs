@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #252525;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        pre {
+            background: #7c7979;
+            padding: 15px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap; /* allows long lines to wrap */
+            word-wrap: break-word;
+            font-size: 16px;
+            color: white;
+        }
+    .back{
+        width:60px;
+            padding: 7px 18px;
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+                        text-decoration: none;
+                        color: rgb(0, 0, 0);
+        }
+        .but{
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= name %></h1>
+    <pre><%= data %></pre>
+    <div class="but">
+        <div class="back"><a href="/">back</a></div>
+    <div class="edit back"><a href="/edit/<%= name %>.txt">edit</a></div>
+    </div>
+</body>
+</html>

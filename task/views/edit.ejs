@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Adder</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+
+<body>
+
+    <h1>Edit file name</h1>
+
+    <form action="/edit" method="post">
+        <!-- <label for="previous">Previous name</label> -->
+        <input type="text" name="previous" placeholder="<%= name %>" value="<%= name %>"><br><br>
+        <input type="text" name="new" placeholder="new name" ><br><br>
+        <input type="submit" value="save">
+    </form>
+
+
+
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #202122;
+        padding: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+</style>
+
+</html>

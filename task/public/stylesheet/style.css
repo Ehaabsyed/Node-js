@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #202122;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.tasks {
+  background-color: rgb(102, 99, 99);
+  height: auto;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.task {
+  height: 140px;
+  width: 250px;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+border-radius: 10px;
+background-color: #3d3b3b;
+}
+
+.task h2 {
+  font-size: 26px;
+}
+
+.task a {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #218838;
+  padding: 6px;
+  margin-bottom: 8px;
+  border-radius: 7px;
+  border: none;
+}
+
+#delete {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 8px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Adder</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+
+<body>
+
+    <h1>Add a Task</h1>
+
+    <form action="/submit-task" method="POST">
+        <label for="taskTitle">Task Title:</label><br>
+        <input type="text" name="taskTitle" placeholder="title"><br><br>
+
+        <label for="taskDescription">Description:</label><br>
+        <textarea name="taskDescription" rows="4" placeholder="details"></textarea><br><br>
+
+        <input type="submit" value="Add Task">
+    </form>
+
+    <div class="tasks">
+        <% if(files.length>0){ %>
+            <% files.forEach(element=> {%>
+                <div class="task">
+                    <h2>
+                        <%= element %>
+                    </h2>
+                    <div class="links">
+                        <a href="/files/<%= element %>">readmore</a>
+                        <a href="/delete/<%= element %>" id="delete">delete</a>
+                    </div>
+                </div>
+                <% }) %>
+                    <%}else{%>
+                        <h3>no task yet</h3>
+                        <%}%>
+
+    </div>
+
+</body>
+
+</html>
