@@ -13,7 +13,7 @@ for (const item of files) {
     let ext = item.split(".")[item.split(".").length - 1]
     if (ext != "js" && ext != "json") {
         if (fsn.existsSync(path.join(directorypath, ext))) {
-            //move file to that directory
+            //move file to their respective directory
             console.log(`moving ${item} to ${ext} folder`)
             fs.rename(path.join(directorypath, item), path.join(directorypath, ext, item))
         } else {
