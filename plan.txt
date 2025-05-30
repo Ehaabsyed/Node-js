@@ -1,0 +1,7 @@
+create index page
+login setup - use cookietoken
+signup setup - no reusing same username and email
+users page - add users - delete users
+create home page - with dummy blogs
+logout - token will be empty - redirect to index page
+
