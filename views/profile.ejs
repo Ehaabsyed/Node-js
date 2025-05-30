@@ -25,6 +25,13 @@
             flex-direction: column;
         }
 
+        .back {
+            position: absolute;
+            color: #1e40af;
+            left: 20px;
+            font-size: 22px;
+            text-decoration: none;
+        }
 
         .profile-container {
             display: flex;
@@ -99,17 +106,20 @@
             margin-bottom: 10px;
         }
 
-        a {
-            font-size: 20px;
-            text-decoration: none;
-            position: absolute;
-            left: 15px;
-            color: #1e3a8a;
-        }
+
 
         .blog h4 {
             margin-top: 0;
             color: #90caf9;
+        }
+
+        .features {
+            display: flex;
+            gap: 15px;
+        }
+
+        .features a {
+            text-decoration: none;
         }
 
         @media (max-width: 600px) {
@@ -121,7 +131,7 @@
 </head>
 
 <body>
-    <a href="/home">Back</a>
+    <a href="/home" class="back">Back</a>
     <div class="profile-container">
         <img style="background-position: center;"
             src="https://www.pngarts.com/files/10/Default-Profile-Picture-PNG-Download-Image.png" alt="User Image" />
@@ -141,13 +151,19 @@
         <% user.posts.reverse().forEach(post=> {%>
             <div class="blog">
                 <%= user.username %>
-                <h3>
-                    <%= post.title %>
-                </h3>
-                <time datetime="2025-05-01"><%= post.date %></time>
-                <p>
-                    <%= post.content %>
-                </p>
+                    <h3>
+                        <%= post.title %>
+                    </h3>
+                    <time datetime="2025-05-01">
+                        <%= post.date %>
+                    </time>
+                    <p>
+                        <%= post.content %>
+                    </p>
+                    <div class="features">
+                        <a href="/deletepost/<%= post._id %>" style="color: #b91c1c;">delete</a>
+                        <a href="/edit/<%= post._id %>" style="color: #64646d;">edit</a>
+                    </div>
             </div>
             <%}); %>
 

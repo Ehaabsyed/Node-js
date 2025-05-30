@@ -80,7 +80,7 @@ app.get('/logout', (req, res) => {
     res.redirect('/')
 })
 //users
-app.get('/users', async (req, res) => {
+app.get('/users',isLoggedIn, async (req, res) => {
     let users = await userModel.find();
     res.render('users', { users })
 })
@@ -88,6 +88,16 @@ app.get('/users', async (req, res) => {
 app.get('/delete/:id', async (req, res) => {
     let deletedUser = await userModel.findOneAndDelete({ _id: req.params.id });
     res.redirect('/users')
+})
+//delete post
+app.get('/deletepost/:id', async (req, res) => {
+    let deletedUser = await postSchema.findOneAndDelete({ _id: req.params.id });
+    res.redirect('/profile')
+})
+//edit post
+app.get('/edit/:id', async (req, res) => {
+    let post = await postSchema.findOne({ _id: req.params.id });
+    res.send(post)
 })
 //profile
 app.get('/profile', isLoggedIn, async (req, res) => {
