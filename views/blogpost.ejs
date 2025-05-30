@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Write a Blog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #dddddd;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #2a2a2a;
+      color: #f5f5f5;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 180px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #2196f3;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1976d2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Write a Blog</h1>
+    <form action="/submit-blog" method="POST">
+      <label for="title">Blog Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter title" required />
+
+      <label for="content">Blog Content</label>
+      <textarea id="content" name="content" placeholder="whats on your mind...?" required></textarea>
+
+      <button type="submit">Submit Blog</button>
+    </form>
+  </div>
+
+</body>
+</html>
